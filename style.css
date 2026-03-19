@@ -1,0 +1,66 @@
+/* ---------- BACKGROUND IMAGE ---------- */
+.stApp {
+    background-image: url("travel.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ---------- MAIN CONTAINER ---------- */
+.block-container {
+    background: rgba(0, 0, 0, 0.60);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 850px;
+    margin-top: 50px;
+}
+
+
+/* ---------- MAIN TITLE ---------- */
+h1 {
+    font-size: 48px !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* ---------- SUB TITLES ---------- */
+h2, h3 {
+    font-size: 28px !important;
+    font-weight: 600;
+}
+
+
+/* ---------- NORMAL TEXT ---------- */
+p, span, div {
+    font-size: 18px !important;
+}
+
+
+/* ---------- TAB TEXT ---------- */
+button[data-baseweb="tab"] {
+    font-size: 20px !important;
+    font-weight: 600;
+}
+
+
+/* ---------- BUTTON ---------- */
+button[kind="primary"] {
+    font-size: 18px !important;
+    padding: 10px 20px;
+}
+
+
+/* ---------- INPUT BOXES ---------- */
+input {
+    font-size: 18px !important;
+}
+
+
+/* ---------- WEATHER BOX ---------- */
+[data-testid="stSuccess"] {
+    font-size: 18px !important;
+    border-radius: 10px;
+}
