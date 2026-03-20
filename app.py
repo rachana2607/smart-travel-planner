@@ -75,7 +75,7 @@ if st.button("Generate Travel Plan"):
         with st.spinner("Generating your travel plan..."):
 
             weather = get_weather(city)
-            hotels = get_hotels(city)
+            hotels = get_hotels(city, start_date, end_date)
             places = get_places(city)
 
         # TRIP DETAILS

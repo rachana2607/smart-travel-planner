@@ -12,7 +12,7 @@ headers = {
 }
 
 
-def get_hotels(city):
+def get_hotels(city, start_date, end_date):
 
     # Step 1 — Get destination ID
     url_location = "https://apidojo-booking-v1.p.rapidapi.com/locations/auto-complete"
@@ -25,7 +25,7 @@ def get_hotels(city):
     response = requests.get(url_location, headers=headers, params=params_location)
     location_data = response.json()
 
-    if len(location_data) == 0:
+    if not location_data:
         return []
 
     dest_id = location_data[0]["dest_id"]
@@ -35,8 +35,8 @@ def get_hotels(city):
 
     params_hotels = {
         "offset": "0",
-        "arrival_date": "2026-03-18",
-        "departure_date": "2026-03-20",
+        "arrival_date": str(start_date),
+        "departure_date": str(end_date),
         "guest_qty": "1",
         "dest_ids": dest_id,
         "room_qty": "1",
@@ -50,7 +50,12 @@ def get_hotels(city):
     response = requests.get(url_hotels, headers=headers, params=params_hotels)
     hotel_data = response.json()
 
-    try:
-        return hotel_data["result"][:5]
-    except:
+    # Handle multiple response formats
+    if "result" in hotel_data:
+        hotels = hotel_data["result"]
+    elif "data" in hotel_data:
+        hotels = hotel_data["data"]
+    else:
         return []
+
+    return hotels[:5]
