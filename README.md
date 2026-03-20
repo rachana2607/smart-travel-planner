@@ -37,6 +37,15 @@ The system collects weather data, tourist places, and hotel information and then
    - Hotel recommendations
 4. The AI generates a **day-wise travel itinerary**
 
+## 🔑 Environment Variables
+
+This project uses API keys for external services.  
+Create a `.env` file in the project root and add the following keys:
+
+WEATHER_API_KEY=344078acc63582088682ba704e45db9d
+SKYSCANNER_API_KEY=a2e92a06edmshe8bf66da2d27de9p1e6537jsn0b85592cafc6
+GROQ_API_KEY=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
+
 
 <img width="1773" height="796" alt="image" src="https://github.com/user-attachments/assets/f4106985-d17f-4867-b9e3-c4a776f04c35" />
 <img width="832" height="641" alt="image" src="https://github.com/user-attachments/assets/9334a944-4640-49bd-b8bd-e03a68a58bf0" />
